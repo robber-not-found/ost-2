@@ -1,0 +1,49 @@
+#install qt4
+sudo add-apt-repository ppa:gezakovacs/ppa
+sudo apt-get update
+sudo apt-get install libqt4-dev
+sudo apt-get install libqt4-declarative
+sudo apt install libqt4* libqtcore4 libqtgui4 libqtwebkit4 qt4*
+sudo apt install qt4-qmake
+
+#create qthello dir
+mkdir qthello
+cd qthello
+#create qthello.cpp
+gedit qthello.cpp
+
+qmake-qt4 -project
+qmake-qt4
+make
+
+./qthello
+
+#create qtbutton
+cd ..
+mkdir qtbutton
+cd qtbutton
+
+gedit qtbutton.cpp
+
+qmake-qt4 -project
+qmake-qt4
+make
+
+./qtbutton
+
+#create qtmenu
+cd ..
+mkdir qtmenu
+cd qtmenu
+
+gedit mymenu.h
+gedit mymenu.cpp
+gedit main.cpp
+
+qmake-qt4 -project
+qmake-qt4
+make
+
+./qtmenu 
+
+
